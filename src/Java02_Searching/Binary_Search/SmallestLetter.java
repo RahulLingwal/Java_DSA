@@ -47,6 +47,4 @@ public class SmallestLetter {
         //    Alternate Return
         //   return letters[start % letters.length];
     }
-
-
 }
