@@ -1,4 +1,4 @@
-package Recursion.Basic;
+package Java04_Recursion.Basic;
 
 public class FirstUppercaseLetter {
     public static void main(String[] args) {

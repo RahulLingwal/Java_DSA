@@ -1,4 +1,4 @@
-package Recursion.Basic;
+package Java04_Recursion.Basic;
 
 public class Number1toN {
     public static void main(String[] args) {

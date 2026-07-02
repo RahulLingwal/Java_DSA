@@ -1,10 +1,10 @@
-package Recursion.Basic;
+package Java04_Recursion.Basic;
 
 import java.util.Arrays;
 
 public class ReverseString {
     public static void main(String[] args) {
-        char[] string = {'h', 'e', 'l', 'l', 'o' };
+        char[] string = {'h', 'e', 'l', 'l', 'o'};
 
         reverseString(string, 0, string.length - 1);
         System.out.println(Arrays.toString(string));
