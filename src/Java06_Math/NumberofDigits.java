@@ -2,8 +2,8 @@ package Java06_Math;
 
 public class NumberofDigits {
     public static void main(String[] args) {
-        int number = 10;
-        int base = 2;
+        int number = 100;
+        int base = 10;
 
         System.out.println(Integer.toBinaryString(number));
 

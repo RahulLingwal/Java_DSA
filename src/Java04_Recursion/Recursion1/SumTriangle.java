@@ -1,4 +1,4 @@
-package Java04_Recursion.Basic;
+package Java04_Recursion.Recursion1;
 
 import java.util.Arrays;
 
