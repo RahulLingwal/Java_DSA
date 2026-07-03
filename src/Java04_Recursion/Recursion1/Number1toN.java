@@ -9,8 +9,9 @@ public class Number1toN {
         if (n < 1) {
             return;
         }
-
+        System.out.print(n + " ");       //N to 1
+        System.out.println();
         number(n - 1);
-        System.out.println(n);
+        System.out.print(n + " ");
     }
 }
