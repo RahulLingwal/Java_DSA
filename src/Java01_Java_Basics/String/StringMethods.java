@@ -8,6 +8,9 @@ public class StringMethods {
         String str = "Rahul Hello World";
         System.out.println("String = " + str + "\n");
 
+        System.out.println(str.length());
+        System.out.println();
+
         System.out.println(Arrays.toString(str.toCharArray()));
         System.out.println();
 
