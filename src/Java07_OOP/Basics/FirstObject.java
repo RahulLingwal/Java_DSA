@@ -1,4 +1,4 @@
-package Java07_OOP;
+package Java07_OOP.Basics;
 
 public class FirstObject {
     public static void main(String[] args) {
