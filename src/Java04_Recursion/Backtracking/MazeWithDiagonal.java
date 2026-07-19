@@ -7,7 +7,7 @@ public class MazeWithDiagonal {
         ArrayList<String> ans = getPathsDiagonal("", 3, 3);
         System.out.println(ans);
     }
-
+    
     static ArrayList<String> getPathsDiagonal(String processed, int row, int col) {
         if (row == 1 && col == 1) {
             ArrayList<String> list = new ArrayList<>();
