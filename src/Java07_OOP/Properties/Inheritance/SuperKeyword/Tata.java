@@ -4,7 +4,7 @@ public class Tata extends Car {
     String model;
 
     public Tata() {
-        this.model = "Altorz";
+        this.model = "Altroz";
     }
 
     public Tata(float length, int power, int mileage, String model) {
