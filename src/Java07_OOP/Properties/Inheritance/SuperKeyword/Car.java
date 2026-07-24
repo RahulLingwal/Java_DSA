@@ -4,12 +4,14 @@ public class Car {
     float length;
     int power;
     int mileage;
+    String model;
 
     public Car() {
 //        super();  // Object class
         this.length = 4;
         this.power = 80;
         this.mileage = 20;
+        this.model = "Punch";
     }
 
     public Car(float length, int power, int mileage) {
