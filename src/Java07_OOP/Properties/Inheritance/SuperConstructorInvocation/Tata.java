@@ -1,4 +1,4 @@
-package Java07_OOP.Properties.Inheritance.SuperKeyword;
+package Java07_OOP.Properties.Inheritance.SuperConstructorInvocation;
 
 public class Tata extends Car {
     String model;
