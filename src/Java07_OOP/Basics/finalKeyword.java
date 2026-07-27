@@ -5,6 +5,11 @@ public class finalKeyword {
         final int NUM = 10;
         // NUM = 12;            Error: cannot assign a value to final variable
 
+        final int NUM2;
+        NUM2 = 12;
+
+        System.out.println(NUM2);
+
         final Video video = new Video("1GB", "2k", 30);
         video.resolution = "4k";
         System.out.println(video.resolution);
