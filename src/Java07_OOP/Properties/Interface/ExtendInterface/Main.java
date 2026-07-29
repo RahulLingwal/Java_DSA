@@ -1,6 +1,6 @@
 package Java07_OOP.Properties.Interface.ExtendInterface;
 
-public class Main implements A, B {
+public class Main implements B {
     public static void main(String[] args) {
         Main obj = new Main();
         obj.greet();
