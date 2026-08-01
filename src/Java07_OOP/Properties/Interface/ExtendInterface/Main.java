@@ -5,6 +5,8 @@ public class Main implements B {
         Main obj = new Main();
         obj.greet();
         obj.fun();
+        obj.print();
+        B.display();
     }
 
     @Override
