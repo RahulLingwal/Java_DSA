@@ -27,6 +27,78 @@ public class DoublyLinkedList {
         size++;
     }
 
+    public void insertLast(int data) {
+        if (tail == null) {
+            insertFirst(data);
+            return;
+        }
+
+        Node node = new Node(data);
+
+        tail.next = node;
+        node.prev = tail;
+        node.next = null;
+        tail = node;
+
+        size++;
+    }
+
+    public void insert(int index, int data) {
+        if (index == 0) {
+            insertFirst(data);
+            return;
+        }
+
+        if (index == size) {
+            insertLast(data);
+            return;
+        }
+
+        if (index < 0 || index > size) {
+            System.out.println("Incorrect index entered!");
+            return;
+        }
+
+        Node prevNode = head;
+        for (int i = 1; i < index; i++) {
+            prevNode = prevNode.next;
+        }
+
+        Node node = new Node(data, prevNode, prevNode.next);
+        prevNode.next.prev = node;
+        prevNode.next = node;
+
+        size++;
+    }
+
+    public void insertAfter(int after, int data) {
+        if (head == null) {
+            System.out.println("List is empty cannot insert.");
+            return;
+        }
+
+        if (after == size - 1) {
+            insertLast(data);
+            return;
+        }
+
+        if (after < 0 || after >= size) {
+            System.out.println("Incorrect index entered!");
+            return;
+        }
+
+        Node preNode = head;
+        for (int i = 1; i <= after; i++) {
+            preNode = preNode.next;
+        }
+
+        Node node = new Node(data, preNode, preNode.next);
+        preNode.next.prev = node;
+        preNode.next = node;
+
+        size++;
+    }
+
     public void display() {
         Node temp = head;
 
