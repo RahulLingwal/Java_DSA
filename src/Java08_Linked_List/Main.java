@@ -16,6 +16,7 @@ public class Main {
         switch (choice) {
             case 1 -> singlyLinkedList();
             case 2 -> doublyLinkedList();
+            case 3 -> circularLinkedList();
         }
     }
 
@@ -94,6 +95,14 @@ public class Main {
 
         System.out.println("\nElement deleted = " + list.delete(0) + "\n");
         System.out.println("Linked list after element deleted from given index");
+        list.display();
+    }
+
+    public static void circularLinkedList() {
+        CircularLinkedList list = new CircularLinkedList();
+        for (int i = 100; i < 111; i++) {
+            list.insert(i);
+        }
         list.display();
     }
 }
