@@ -65,5 +65,19 @@ public class Main {
         list.display();
         System.out.println("\nReversed Doubly Linked list.");
         list.reverse();
+
+        System.out.println("\nDoubly Linked list after element inserted from last");
+        list.insertLast(30);
+        list.insertLast(34);
+        list.display();
+
+        System.out.println("\nDoubly Linked list after element inserted at given index");
+        list.insert(11, 31);
+        list.display();
+
+        System.out.println("\nDoubly Linked list after element inserted after given index");
+        list.insertAfter(11, 32);
+        list.insertAfter(12, 33);
+        list.display();
     }
 }
