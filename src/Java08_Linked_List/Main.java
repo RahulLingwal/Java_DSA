@@ -104,5 +104,9 @@ public class Main {
             list.insert(i);
         }
         list.display();
+
+        System.out.println("\nElement deleted = " + list.delete(5) + "\n");
+        System.out.println("Circular Linked list after element deleted from given index");
+        list.display();
     }
 }
