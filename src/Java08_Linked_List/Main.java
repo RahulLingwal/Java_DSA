@@ -79,5 +79,21 @@ public class Main {
         list.insertAfter(11, 32);
         list.insertAfter(12, 33);
         list.display();
+
+        System.out.println("\nElement deleted = " + list.deleteFirst() + "\n");
+        System.out.println("Doubly Linked list after element deleted from first index");
+        list.display();
+
+        System.out.println("\nElement deleted = " + list.deleteLast() + "\n");
+        System.out.println("Doubly Linked list after element deleted from last index");
+        list.display();
+
+        System.out.println("\nElement deleted = " + list.delete(8) + "\n");
+        System.out.println("Linked list after element deleted from given index");
+        list.display();
+
+        System.out.println("\nElement deleted = " + list.delete(0) + "\n");
+        System.out.println("Linked list after element deleted from given index");
+        list.display();
     }
 }

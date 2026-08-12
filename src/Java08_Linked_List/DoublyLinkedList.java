@@ -44,6 +44,11 @@ public class DoublyLinkedList {
     }
 
     public void insert(int index, int data) {
+        if (index < 0 || index > size) {
+            System.out.println("Incorrect index entered!");
+            return;
+        }
+
         if (index == 0) {
             insertFirst(data);
             return;
@@ -51,11 +56,6 @@ public class DoublyLinkedList {
 
         if (index == size) {
             insertLast(data);
-            return;
-        }
-
-        if (index < 0 || index > size) {
-            System.out.println("Incorrect index entered!");
             return;
         }
 
@@ -97,6 +97,73 @@ public class DoublyLinkedList {
         preNode.next = node;
 
         size++;
+    }
+
+    public int deleteFirst() {
+        if (head == null) {
+            System.out.println("List is Empty!");
+            return -1;
+        }
+
+        int deleted = head.data;
+
+        if (head == tail) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+        size--;
+
+        return deleted;
+    }
+
+    public int deleteLast() {
+        if (head == null) {
+            System.out.println("List is Empty!");
+            return -1;
+        }
+
+        if (head == tail) return deleteFirst();
+
+        int deleted = tail.data;
+        tail = tail.prev;
+        tail.next = null;
+        size--;
+
+        return deleted;
+    }
+
+    public int delete(int index) {
+        if (head == null) {
+            System.out.println("List is Empty!");
+            return -1;
+        }
+
+        if (index < 0 || index >= size) {
+            System.out.println("Incorrect index entered!");
+            return -1;
+        }
+
+        if (index == 0) return deleteFirst();
+
+        if (index == size - 1) return deleteLast();
+
+        Node remove = head;
+        for (int i = 1; i <= index; i++) {
+            remove = remove.next;
+        }
+
+        int deleted = remove.data;
+        remove.next.prev = remove.prev;
+        remove.prev.next = remove.next;
+        remove.prev = null;
+        remove.next = null;
+
+        size--;
+
+        return deleted;
     }
 
     public void display() {
