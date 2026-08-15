@@ -4,7 +4,7 @@ package Java08_Linked_List.Questions;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
-        Solution list = new Solution();
+        ListNode list = new ListNode();
         list.insert(1);
         list.insert(1);
         list.insert(1);
@@ -14,16 +14,17 @@ public class RemoveDuplicates {
         list.insert(4);
         list.display();
 
-        list.deleteDuplicates(list.head);
-        list.display();
+        ListNode result = Solution.deleteDuplicates(list.head);
+        while (result != null) {
+            System.out.print(result.val + " -> ");
+            result = result.next;
+        }
+        System.out.println("null");
     }
 }
 
 class Solution {
-    ListNode head;
-
-    //------------------------ LeetCode Solution -----------------------------
-    public ListNode deleteDuplicates(ListNode head) {
+    public static ListNode deleteDuplicates(ListNode head) {
         if (head == null) {
             return head;
         }
@@ -39,43 +40,5 @@ class Solution {
         }
 
         return head;
-    }
-    // -------------------------------------------------------------------
-
-    public void insert(int val) {
-        ListNode node = new ListNode(val, null);
-        if (head == null) {
-            head = node;
-            return;
-        }
-
-        ListNode cur = head;
-        while (cur.next != null) {
-            cur = cur.next;
-        }
-        cur.next = node;
-    }
-
-    public void display() {
-        ListNode temp = head;
-        while (temp != null) {
-            System.out.print(temp.val + " -> ");
-            temp = temp.next;
-        }
-        System.out.println("null");
-    }
-
-    private class ListNode {
-        private int val;
-        private ListNode next;
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
