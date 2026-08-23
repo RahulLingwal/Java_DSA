@@ -18,7 +18,7 @@ public class CustomQueue {
     }
 
     private boolean isEmpty() {
-        return end == -1;
+        return end == 0;
     }
 
     public void enqueue(int value) {
