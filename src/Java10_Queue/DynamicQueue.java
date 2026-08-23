@@ -33,7 +33,6 @@ public class DynamicQueue {
             front = 0;
             end = queue.length;
             queue = temp;
-            return;
         }
 
         queue[end++] = value;

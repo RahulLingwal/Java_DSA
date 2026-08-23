@@ -42,7 +42,7 @@ public class Main {
     }
 
     private static void dynamicQueue() throws Exception {
-        CircularQueue queue = new CircularQueue(15);
+        DynamicQueue queue = new DynamicQueue(5);
         for (int i = 1; i <= 5; i++) {
             queue.enqueue(i * 10);
         }
