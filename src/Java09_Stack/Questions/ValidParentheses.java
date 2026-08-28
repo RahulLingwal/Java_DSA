@@ -21,9 +21,9 @@ public class ValidParentheses {
 
 class ParenthesesSolution {
     public static boolean isValid(String s) {
-        Stack<Integer> stack = new Stack<>();
+        Stack<Character> stack = new Stack<>();
 
-        for (int ch : s.toCharArray()) {
+        for (char ch : s.toCharArray()) {
             if (ch == '(' || ch == '{' || ch == '[') {
                 stack.push(ch);
             } else {
