@@ -8,6 +8,9 @@ public class Main {
         BinaryTree tree = new BinaryTree();
 
         tree.populate(scanner);
-        tree.display();
+//        tree.display();
+        tree.preOrder();
+        tree.postOrder();
+        tree.inOrder();
     }
 }

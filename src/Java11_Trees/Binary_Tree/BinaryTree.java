@@ -53,6 +53,46 @@ public class BinaryTree {
         }
     }
 
+    // Traversal in Tree
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    private void preOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        System.out.print(node.value + " ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public void inOrder() {
+        preOrder(root);
+    }
+
+    private void inOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        preOrder(node.left);
+        System.out.print(node.value + " ");
+        preOrder(node.right);
+    }
+
+    public void postOrder() {
+        preOrder(root);
+    }
+
+    private void postOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        preOrder(node.left);
+        preOrder(node.right);
+        System.out.print(node.value + " ");
+    }
+
     private class Node {
         int value;
         Node left;
